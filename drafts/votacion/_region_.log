@@ -1,0 +1,192 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=prv_statement 2015.9.24)  24 SEP 2015 17:23
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**&prv_statement _region_.tex
+(./_region_.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+CUSTOMISED FORMAT. Preloaded files:
+        .
+ article.cls    2014/09/29 v1.4h Standard LaTeX document class
+  size10.clo    2014/09/29 v1.4h Standard LaTeX file (size option)
+inputenc.sty    2015/03/17 v1.2c Input encoding file
+    utf8.def    2014/09/29 v1.1m UTF-8 support for inputenc
+   t1enc.dfu    2014/09/29 v1.1m UTF-8 support for inputenc
+  ot1enc.dfu    2014/09/29 v1.1m UTF-8 support for inputenc
+  omsenc.dfu    2014/09/29 v1.1m UTF-8 support for inputenc
+fullpage.sty    1999/02/23 1.1 (PWD)
+        .
+No file _region_.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+(/home/nlehmann/.emacs.d/elpa/auctex-11.88.8/latex/preview.sty
+Package: preview 2010/02/14 11.88 (AUCTeX/preview-latex)
+
+(/home/nlehmann/.emacs.d/elpa/auctex-11.88.8/latex/prtightpage.def
+\PreviewBorder=\dimen103
+)
+(/home/nlehmann/.emacs.d/elpa/auctex-11.88.8/latex/prauctex.def
+No auxiliary output files.
+
+
+\hbadness=\count87
+\hfuzz=\dimen104
+(/home/nlehmann/.emacs.d/elpa/auctex-11.88.8/latex/prauctex.cfg))
+(/home/nlehmann/.emacs.d/elpa/auctex-11.88.8/latex/prfootnotes.def)
+\pr@snippet=\count88
+\pr@box=\box26
+\pr@output=\toks16
+
+Preview: Fontsize 10pt
+Preview: PDFoutput 1
+)  !name(statement.tex) !offset(-3) 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 11.
+
+
+LaTeX Warning: No \author given.
+
+! Preview: Snippet 1 started.
+<-><->
+      
+l.41 \section
+             *{Entrada}
+Not a real error.
+
+Preview: Tightpage -32891 -32891 32891 32891
+! Preview: Snippet 1 ended.(655359+0x30785865).
+<-><->
+      
+l.41 \section*{Entrada}
+                       
+Not a real error.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+! Preview: Snippet 2 started.
+<-><->
+      
+l.44 votantes $
+               V$ y la cantidad de candidatos $C$. Los candidatos son repres...
+
+Not a real error.
+
+! Preview: Snippet 2 ended.(447828+0x527929).
+<-><->
+      
+l.44 votantes $V$
+                  y la cantidad de candidatos $C$. Los candidatos son repres...
+
+Not a real error.
+
+[2]
+! Preview: Snippet 3 started.
+<-><->
+      
+l.44 votantes $V$ y la cantidad de candidatos $
+                                               C$. Los candidatos son repres...
+
+Not a real error.
+
+! Preview: Snippet 3 ended.(447828+0x515276).
+<-><->
+      
+l.44 votantes $V$ y la cantidad de candidatos $C$
+                                                 . Los candidatos son repres...
+
+Not a real error.
+
+[3]
+! Preview: Snippet 4 started.
+<-><->
+      
+l.45 con números de 1 a $
+                          C$. La siguiente línea contiene $V$ enteros entre...
+
+Not a real error.
+
+! Preview: Snippet 4 ended.(447828+0x515276).
+<-><->
+      
+l.45 con números de 1 a $C$
+                            . La siguiente línea contiene $V$ enteros entre...
+
+Not a real error.
+
+[4]
+! Preview: Snippet 5 started.
+<-><->
+      
+l.45 ...de 1 a $C$. La siguiente línea contiene $
+                                                  V$ enteros entre 1 y $C$
+Not a real error.
+
+! Preview: Snippet 5 ended.(447828+0x527929).
+<-><->
+      
+l.45 ... 1 a $C$. La siguiente línea contiene $V$
+                                                   enteros entre 1 y $C$
+Not a real error.
+
+[5]
+! Preview: Snippet 6 started.
+<-><->
+      
+l.45 ...te línea contiene $V$ enteros entre 1 y $
+                                                  C$
+Not a real error.
+
+! Preview: Snippet 6 ended.(447828+0x515276).
+<-><->
+      
+l.45 ... línea contiene $V$ enteros entre 1 y $C$
+                                                  
+Not a real error.
+
+[6]
+! Preview: Snippet 7 started.
+<-><->
+      
+l.50 \section
+             *{Salida}
+Not a real error.
+
+! Preview: Snippet 7 ended.(655359+0x30785865).
+<-><->
+      
+l.50 \section*{Salida}
+                      
+Not a real error.
+
+[7] ) 
+Here is how much of TeX's memory you used:
+ 201 strings out of 492628
+ 2803 string characters out of 6135797
+ 60778 words of memory out of 5000000
+ 4170 multiletter control sequences out of 15000+600000
+ 8766 words of font info for 31 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 22i,6n,24p,166b,196s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
+re/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+Output written on _region_.pdf (7 pages, 17965 bytes).
+PDF statistics:
+ 36 PDF objects out of 1000 (max. 8388607)
+ 24 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
