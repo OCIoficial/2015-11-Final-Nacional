@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+
+\title{Sistemas Estelares}
+
+\begin{document}
+\maketitle
+
+La Oficina de Comunicaciones Interestelares, formada por distinguidos científicos de todo el mundo, se encarga del estudio de las comunicaciones a gran distancia.
+Ésta es globalmente reconocida por sus equipos, que permiten la comunicación efectiva entre sus sistemas en la Tierra, sondas y estaciones espaciales.
+
+La división de señales de alta potencia de la OCI ha descubierto un método para enviar señales con un alcance de cientos de años luz.
+Para probarlo, se iniciará un programa de emisión de estas ondas de largo alcance.
+Sin embargo, tal programa es muy costoso, y por ello solamente es posible emitir tales señales a cinco (5) sistemas estelares de la Vía Láctea.
+
+Entre las divisiones menos conocidas de la OCI, se encuentra la división de Búsqueda de Vida Extraterrestre (BVET).
+La principal actividad de esta división consiste en el análisis de ondas de radio provenientes de los sistemas estelares de nuestra galaxia.
+Esporádicamente, aparecen pulsaciones que podrían indicar la presencia de vida extraterrestre.
+Cada evento de pulsaciones se registra indicando el sistema desde el que provino, además de otra información que por el momento no nos es relevante.
+
+BVET recomienda emitir las señales a los cinco sistemas responsables de más eventos de pulsaciones durante el último año.
+Sin embargo, el equipo de informática reunció colectivamente el lunes recién pasado, por lo que la OCI ha acudido a ti con la misión de que determines estos cinco sistemas.
+
+\section*{Entrada}
+La entrada consiste en varias líneas.
+La primera línea contiene un único número $N$, el número de eventos de pulsaciones ocurridas durante el último año.
+Las siguientes $N$ líneas corresponden cada una a un evento de pulsaciones, y contienen un único valor $i$ ($1 \le i \le S$), el sistema en el cual se detectó el evento.
+
+\section*{Salida}
+Tu respuesta debe consistir en una única línea con cinco enteros ordenados \emph{de menor a mayor}.
+Éstos deben ser los sistemas a los que se deben emitir las señales del sistema experimental.
+Este conjunto siempre será único, es decir, no cabe la posibilidad de dos soluciones diferentes.
+
+\section*{Subtareas}
+\begin{itemize}
+%TODO
+  \item $V < 100$ y $C<100$ se puede hacer algo cuadrático
+  \item $V < 10^5$ y $C<10^5$ se puede contar cada número en un arreglo
+  \item $V < 10^5$ y $C<10^9$ hay que ordenarlo primero o guardar numero en un map
+\end{itemize}
+
+\end{document}
