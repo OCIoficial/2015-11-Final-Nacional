@@ -9,31 +9,27 @@
 
 #include <vector>
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
-#define MAX 10000000
 
 int main() {
-  long long n;
+  int n;
   cin >> n;
-  vector<long long> V(MAX+1);
+  vector<int> G(n < 3? 4 : n + 1);
 
-  V[1] = 1;
-  V[2] = 2;
-  if (n <= 2) {
-    cout << n << "\n";
-    return 0;
-  }
-  long i = 3;
-  long g = 2;
-  while (true) {
-    V[i] = V[i-1] + g;
-    if (V[i] > n)
-      break;
-    if (i >= V[g+1]) ++g;
-    ++i;
-  }
-  cout << i - 1 << "\n";
+  G[1] = 1;
+  G[2] = 2;
+  G[3] = 2;
 
-  return 0;
+  int i = 4;
+  int a = 3;
+  while (i <= n) {
+    for (int j = 0; i <= n && j < G[a]; ++j)
+      G[i++] = a;
+    a++;
+  }
+
+  cout << G[n] << endl;
 }
+
