@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Gollum {
+class sbarbieri_100 {
 	//V[n] guarda el primer entero k tal que G(k)=n. Notar que V[n+1]=V[n]+G(n)
 	//Dados los casos de prueba, se puede ver que el crecimiento de G(n) es lento,
   //pero no tanto como para guardar V[n] hasta poder calcular G(10^15).
