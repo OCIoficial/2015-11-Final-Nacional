@@ -11,8 +11,8 @@ int main(){
 	int rb=(n+b-1)/b;
 	if (ra==rb) cout << p << endl;
 	else{
-		if (ra<rb) cout << 0 << endl;
-		else cout << 1 << endl;
+		if (ra<rb) cout << 1 << endl;
+		else cout << 2 << endl;
 	}
 	return 0;
 }
