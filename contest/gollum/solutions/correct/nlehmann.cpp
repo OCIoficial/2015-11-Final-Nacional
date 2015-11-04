@@ -26,16 +26,13 @@ int main() {
   }
   long i = 3;
   long g = 2;
-  // cerr << 1 << " " << 2;
   while (true) {
     V[i] = V[i-1] + g;
-    // cerr << " " << V[i];
     if (V[i] > n)
       break;
     if (i >= V[g+1]) ++g;
     ++i;
   }
-  // cerr << " ";
   cout << i - 1 << "\n";
 
   return 0;
