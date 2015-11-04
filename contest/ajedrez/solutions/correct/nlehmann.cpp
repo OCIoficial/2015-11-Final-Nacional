@@ -27,9 +27,9 @@ int bfs(int xi, int yi, int xf, int yf) {
   while (!q.empty()) {
     int nx = q.front().first;
     int ny = q.front().second;
+    q.pop();
     if (nx == xf && ny == yf)
       return mat[nx][ny];
-    q.pop();
     for (int i = 0; i < 8; ++i) {
       int vx = nx + movx[i];
       int vy = ny + movy[i];
@@ -42,41 +42,32 @@ int bfs(int xi, int yi, int xf, int yf) {
   return -1;
 }
 
-int main() {
-  int P, Xi, Yi, Xf, Yf;
-  cin >> P >> Xi >> Yi >> Xf >> Yf;
-  if (Xi == Xf && Yi == Yf) {
-    cout << 0 << endl;
+int P, Xi, Yi, Xf, Yf;
+int calc() {
+  if (Xi == Xf && Yi == Yf)
     return 0;
-  }
   int pi = (Xi + 101*Yi)%2;
   int pf = (Xf + 101*Yf)%2;
   switch (P) {
-  case 1: //TORRE
-    if (Xi == Xf || Yi == Yf)
-      cout << 1 << endl;
-    else
-      cout << 2 << endl;
-    break;
-  case 2: //ALFIL
+  // TORRE
+  case 1: return (Xi == Xf || Yi == Yf) ? 1 : 2;
+  // ALFIL
+  case 2:
     if (pi != pf)
-      cout << -1 << endl;
-    else if (abs(Xi-Xf) == abs(Yi-Yf))
-      cout << 1 << endl;
-    else
-      cout << 2 << endl;
-    break;
-  case 3: //REINA
-    if (abs(Xi - Xf) == abs(Yi - Yf) || Xi == Xf || Yi == Yf)
-      cout << 1 << endl;
-    else
-      cout << 2 << endl;
-    break;
-  case 4: //REY
-    cout << max(abs(Xi - Xf), abs(Yi - Yf)) << endl;
-    return 0;
-  case 5: //Caballo
-    cout << bfs(Xi, Yi, Xf, Yf) << endl;
+      return -1;
+    return abs(Xi-Xf) == abs(Yi-Yf) ? 1 : 2;
+  // REINA
+  case 3: return (abs(Xi - Xf) == abs(Yi - Yf) || Xi == Xf || Yi == Yf) ? 1 : 2;
+  // REY
+  case 4: return max(abs(Xi - Xf), abs(Yi - Yf));
+  // CABALLO
+  case 5: return bfs(Xi, Yi, Xf, Yf);
   }
+  return -1;
+}
+
+int main() {
+  cin >> P >> Xi >> Yi >> Xf >> Yf;
+  cout << calc() << endl;
   return 0;
 }
