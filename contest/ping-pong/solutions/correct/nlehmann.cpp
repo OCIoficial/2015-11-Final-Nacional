@@ -25,12 +25,12 @@ int main() {
         cout << P + 1 << endl;
         return 0;
       }
-      P = 1 - P;
-      points[P]++;
-      if (points[P] == N) {
-        cout << P + 1 << endl;
-        return 0;
-      }
+    }
+    P = 1 - P;
+    points[P]++;
+    if (points[P] == N) {
+      cout << P + 1 << endl;
+      return 0;
     }
   }
 
