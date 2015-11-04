@@ -1,0 +1,38 @@
+/*
+ * -----------------------------------------------------------------------------
+ * "THE BEER-WARE LICENSE" (Revision 42):
+ * <nlehmann@dcc.uchile.cl> wrote this file. As long as you retain this notice
+ * you can do whatever you want with this stuff. If we meet some day, and you
+ * think this stuff is worth it, you can buy me a beer in return Nicolás Lehmann
+ * -----------------------------------------------------------------------------
+ */
+
+#include <vector>
+#include <iostream>
+using namespace std;
+
+int main() {
+  int N, P;
+  vector<int> R(2);
+  cin >> N >> P >> R[0] >> R[1];
+  P--;
+
+  vector<int> points(2);
+  while (true) {
+    for (int i = 0; i < R[P]; ++i) {
+      points[P]++;
+      if (points[P] == N) {
+        cout << P + 1 << endl;
+        return 0;
+      }
+      P = 1 - P;
+      points[P]++;
+      if (points[P] == N) {
+        cout << P + 1 << endl;
+        return 0;
+      }
+    }
+  }
+
+  return 0;
+}
