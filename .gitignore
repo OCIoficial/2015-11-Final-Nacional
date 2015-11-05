@@ -29,5 +29,5 @@ auto
 *.zip
 TAGS
 *.bin
-*.sol
 *.class
+**/testdata/*.sol
