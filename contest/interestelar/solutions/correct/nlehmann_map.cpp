@@ -17,7 +17,7 @@ int main() {
   map<int, int> count;
   scanf("%d %d", &N, &S);
 
-  for (int i = 0; i < S; ++i) {
+  for (int i = 0; i < N; ++i) {
     int s;
     scanf("%d", &s);
     count[s]++;
@@ -26,7 +26,7 @@ int main() {
   for (int i = 0; i < 5; ++i) {
     int max = -1;
     int smax = -1;
-    for (auto p : count) {
+    for (pair<int, int> p : count) {
       if (p.second > max) {
         max = p.second;
         smax = p.first;
