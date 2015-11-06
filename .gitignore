@@ -31,3 +31,4 @@ TAGS
 *.bin
 *.class
 **/testdata/*.sol
+checker
