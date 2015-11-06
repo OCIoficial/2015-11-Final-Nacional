@@ -62,13 +62,13 @@ int main (int argc, char *argv[]) {
 	fin.close();
 	
 	
-	/* Get keys which may be used in the answer */
+	/* Get frequencies which may be used in the answer */
 	
-	vector<int> opts; // Any possible answer IS here.
+	vector<int> opts(5); // One of the possible answers will be here.
 	int first_repeated = 0; // Numbers before this MUST be included
 	int last = -1;
 	
-	for (int i = 0; ; i++) {
+	for (int i = 0; i < 5; i++) {
 		map<int,int>::iterator best = freq.begin();	// Best pair so far
 		
 		for (auto it = freq.begin(); it != freq.end(); it++) {
@@ -78,14 +78,11 @@ int main (int argc, char *argv[]) {
 		}
 		
 		if (best->second != last) {
-			if (i >= 5) {
-				break;
-			}
 			first_repeated = i;
 		}
 		
 		last = best->second;
-		opts.push_back(best->first);
+		opts[i] = best->first;
 		freq.erase(best);
 	}
 	
@@ -161,15 +158,21 @@ int main (int argc, char *argv[]) {
 			}
 		}
 		int pos;
-		for (pos = 0; pos < opts.size(); pos++) {
+		for (pos = 0; pos < 5; pos++) {
 			if (opts[pos] == ans[i]) {
 				break;
 			}
 		}
 		if (pos == opts.size()) {
-			// Not found; system is not part of any solution
-			cerr << "Respuesta incorrecta.\n";
-			return wrong_ans();
+			// Not found; check if frequency is equal to the 5th
+			if (last == freq[ans[i]]) {
+				pos = 4;
+			}
+			else {
+				// Suboptimal frequency
+				cerr << "Respuesta incorrecta.\n";
+				return wrong_ans();
+			}
 		}
 		if (first_repeated <= pos) {
 			first_repeated++;
