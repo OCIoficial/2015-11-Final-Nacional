@@ -18,7 +18,7 @@ int main () {
   scanf("%d %d", &N, &S);
   vector<int> count(S+1);
 
-  for (int i = 0; i < S; ++i) {
+  for (int i = 0; i < N; ++i) {
     int s;
     scanf("%d", &s);
     count[s]++;
@@ -26,7 +26,7 @@ int main () {
 
   for (int i = 0; i < 5; ++i) {
     int imax = 0;
-    for (int j = 0; j < S; ++j)
+    for (int j = 1; j <= S; ++j)
       if (count[j] > count[imax])
         imax = j;
     count[imax] = -1;
