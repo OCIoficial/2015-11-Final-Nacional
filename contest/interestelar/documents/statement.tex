@@ -14,14 +14,15 @@ La Oficina de Comunicaciones Interestelares (OCI) es una organización formada p
 La división de señales de alta potencia de la OCI ha descubierto recientemente un método para enviar señales con un alcance de cientos de años luz.
 Para probarlo, se iniciará un programa de emisión de estas ondas de largo alcance.
 Sin embargo, el programa es muy costoso, y en esta primera fase el presupuesto solo alcanza para emitir señales a 5 sistemas interestelares dentro de la Vía Láctea.
-Para apoyar el trabajo de la división de Búsqueda de Vida Extraterrestre (BVET), el directorio de la OCI ha decidido que el destino de estas señales sea determinado por los científicos de esta división.
+Para apoyar el trabajo de la división de Búsqueda de Vida Extraterrestre (BVET), el directorio de la OCI ha decidido que el destino de estas señales sea determinado por los científicos de la BVET.
 
 La principal actividad de la BVET consiste en el análisis de ondas de radio provenientes de sistemas interestelares dentro de nuestra galaxia.
 Esporádicamente, aparecen pulsaciones que podrían indicar la presencia de vida extraterrestre.
 Sus equipos monitorean estas pulsaciones registrando para cada evento el sistema de donde provino.
 
 La BVET decidió emitir las señales a los cinco sistemas que hayan registrado más eventos con pulsaciones, pues esto indicaría una mayor probabilidad de existencia de vida extraterrestre.
-Sin embargo, sus equipos han registrado muchos eventos y están teniendo problemas para determinar cu\'ales son los sistemas con más eventos.
+Sin embargo, sus equipos han registrado muchos eventos y están teniendo problemas para determinar cu\'ales son los 5 sistemas con más eventos.
+Tú, que has sido recientemente contratado por la OCI, debes ayudar a los científicos de la BVET a tomar la decisión.
 
 \end{problemDescription}
 
@@ -45,13 +46,20 @@ Se garantiza que al menos habrán cinco sistemas para los cuales existen eventos
 \end{outputDescription}
 
 \begin{scoreDescription}
-  \score{30} Se probarán varios casos donde $5 \le N \le 100$ y $5 \le S \le 100$.
-  \score{35} Se probarán varios casos donde $100 < N \le 10^5$ y $100 < S \le 10^5$.
+  \score{5} Se probarán varios casos donde $N=S=5$.
+  \score{10} Se probarán varios casos donde $N=5$, $S=6$.
+  \score{20} Se probarán varios casos donde $5 \le N \le 100$ y $5 \le S \le 100$.
+  \score{30} Se probarán varios casos donde $100 < N \le 10^5$ y $100 < S \le 10^5$.
   \score{35} Se probarán varios casos donde $100 < N \le 10^5$ y $10^8 < S \le 10^9$.
 \end{scoreDescription}
 
 \begin{sampleDescription}
+  \sampleIO{sample0}
+  \sampleIO{sample1}
   \sampleIO{sample}
 \end{sampleDescription}
 
+Nota que en este último caso, en los sistemas
+\texttt{1}, \texttt{2}, \texttt{4} y \texttt{5} se detectaron exactamente dos pulsaciones, por lo que
+una solución como \texttt{7 6 4 2 1} también sería válida.
 \end{document}
