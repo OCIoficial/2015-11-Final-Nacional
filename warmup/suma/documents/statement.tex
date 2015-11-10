@@ -1,0 +1,67 @@
+\documentclass{oci}
+\usepackage[utf8]{inputenc}
+\usepackage{xspace}
+\usepackage{lipsum}
+
+\title{La gran suma}
+
+\newcommand{\C}{\texttt{C}\xspace}
+\newcommand{\Cpp}{\texttt{C++}\xspace}
+\newcommand{\Int}{\texttt{int}\xspace}
+\newcommand{\Long}{\texttt{long long}\xspace}
+\newcommand{\cin}{\texttt{cin}\xspace}
+\newcommand{\scanf}{\texttt{scanf}\xspace}
+
+\begin{document}
+\begin{problemDescription}
+  Alejandra tiene dos números y necesita sumarlos.
+El problema es que los números son muy grandes y no puede ingresarlos en su calculadora.
+Alejandra espera que puedas ayudarla usando el computador.
+
+En \C y \Cpp una variable de tipo \Int es de 32 bits, esto quiere decir que puede guardar números en el rango $[-2^{31}, 2^{31}-1]$.
+El número más grande en este rango es el 2.147.483.647 que es aproximadamente $2\times 10^9$.
+Si se intenta guardar un número más grande, como el 10.737.418.239, se obtendrán resultados inesperados.
+Afortunadamente en \C y \Cpp es posible almacenar números más grandes usando variables del tipo \Long.
+Estas variables son de 64 bits, es decir, pueden guardar números en el rango $[-2^{63}, 2^{63}-1]$.
+El número más grande en este rango es el 9.223.372.036.854.775.807 o aproximadamente $9\times 10^{18}$.
+Este número es bastante más grande que el máximo entero almacenable en una variable de tipo \Int.
+
+Notar además que si se quiere sumar dos variables de tipo \Int o \Long el resultado debe entrar en una variable de tipo \Int o \Long respectivamente.
+Por ejemplo, el resultado de $2^{30}+2^{30}$ es $2^{31}$ (uno más que el máximo entero de tipo \Int), y por lo tanto no se puede hacer la operación con enteros de tipo \Int.
+Para realizar la operación anterior habría que guardar los enteros en una variable de tipo \Long.
+
+Para leer un entero de tipo \Long en \Cpp puede usarse el comando \cin de la misma forma que para leer un entero de tipo \Int.
+\begin{verbatim}
+long long n;
+cin >> n;
+\end{verbatim}
+
+En \C puede usarse la función \scanf para leer un entero de tipo \Long utilizando el modificador \texttt{\%lld}.
+\begin{verbatim}
+long long n;
+scanf("%lld", &n);
+\end{verbatim}
+
+Tu tarea consiste en leer dos enteros y calcular su suma.
+  
+\end{problemDescription}
+
+\begin{inputDescription}
+  La entrada consiste en una única línea correspondiente a dos enteros $A$ y $B$ separados por un espacio.
+\end{inputDescription}
+
+\begin{outputDescription}
+  Debes imprimir una única linea con el resultado de la suma de $A$ más $B$.
+\end{outputDescription}
+
+\begin{scoreDescription}
+  \score{40} Se probarán varios casos donde $0\leq A,B < 2^{30}-1$.
+  \score{60} Se probarán varios casos donde $2^{30}\leq A,B < 2^{62}-1$.
+\end{scoreDescription}
+
+\begin{sampleDescription}
+\sampleIO{sample1}
+\sampleIO{sample1}
+\end{sampleDescription}
+
+\end{document}
