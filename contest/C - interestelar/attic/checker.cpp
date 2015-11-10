@@ -148,6 +148,7 @@ int main (int argc, char *argv[]) {
 	
 	
 	/* Answer checking */
+	int cnt_opt = 0;
 	
 	for (int i = 0; i < 5; i++) {
 		for (int j = 0; j < i; j++) {
@@ -175,11 +176,11 @@ int main (int argc, char *argv[]) {
 			}
 		}
 		if (first_repeated <= pos) {
-			first_repeated++;
+			cnt_opt++;
 		}
 	}
 	
-	if (first_repeated != 5) {
+	if (cnt_opt + first_repeated != 5) {
 		// Missing a mandatory system
 		cerr << "Repuesta incorrecta.\n";
 		return wrong_ans();
