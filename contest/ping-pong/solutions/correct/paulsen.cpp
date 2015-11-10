@@ -7,8 +7,8 @@ int main(){
 	int res;
 	cin >> n >> p;
 	cin >> a >> b;
-	int ra=(n+a-1)/a;
-	int rb=(n+b-1)/b;
+	int ra=(n+a)/a;
+	int rb=(n+b)/b;
 	if (ra==rb) cout << p << endl;
 	else{
 		if (ra<rb) cout << 1 << endl;
