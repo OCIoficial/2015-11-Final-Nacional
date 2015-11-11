@@ -42,7 +42,7 @@ Se garantiza que al menos habrán cinco sistemas para los cuales existen eventos
   Tu respuesta debe consistir en una única línea con cinco enteros separados por espacios.
   Estos deben corresponder a los cinco sistemas que registraron más eventos.
   Puedes imprimir estos enteros en cualquier orden.
-  Si existe más de una solución puedes reportar cualquiera.
+  Si existe más de una solución puedes reportar cualquiera. (Mira la explicación luego de los casos de ejemplo.)
 \end{outputDescription}
 
 \begin{scoreDescription}
@@ -59,7 +59,29 @@ Se garantiza que al menos habrán cinco sistemas para los cuales existen eventos
   \sampleIO{sample}
 \end{sampleDescription}
 
-Nota que en este último caso, en los sistemas
-\texttt{1}, \texttt{2}, \texttt{4} y \texttt{5} se detectaron exactamente dos pulsaciones, por lo que
-una solución como \texttt{7 6 4 2 1} también sería válida.
+Nota que dado que el orden de los valores en la respuesta no importa, en el primer caso de ejemplo otra 
+posible respuesta v\'alida puede ser
+\begin{center}
+\texttt{5 4 3 2 1}
+\end{center}
+Por su parte, en el segundo caso de ejemplo otra posible respuesta v\'alida puede ser
+\begin{center}
+\texttt{1 6 3 5 4}
+\end{center}
+
+M\'as aun, si analizas el tercer caso de ejemplo, en los sistemas \texttt{6} y \texttt{7} se detectaron
+3 pulsaciones, mientras que en los sistemas \texttt{1}, \texttt{2}, \texttt{4} y \texttt{5} 
+se detectaron exactamente 2 pulsaciones, y en los demás sistemas no se detectaron pulsaciones. 
+Por esto, las respuestas 
+\begin{center}
+\texttt{6 7 1 4 5}
+\end{center}
+y
+\begin{center}
+\texttt{6 7 2 4 5}
+\end{center}
+también serían válidas. 
+
+Recuerda que independiente de la cantidad de respuestas válidas que existan tu programa
+solo debe generar una de ellas.
 \end{document}
