@@ -28,18 +28,23 @@ int main (int argc, char *argv[]) {
 	fcorr.open(argv[2]);
 	ftest.open(argv[3]);
 	
+	if (argc < 4) {
+		cerr << "Missing parameter. Please contact contest administrator.\n";
+		return -1;
+	}
+	
 	if (!fin.is_open()) {
-		cerr << "Could not open file \"" << argv[1] << "\".\n";
+		cerr << "Could not open file \"" << argv[1] << "\". Please contact contest administrator.\n";
 		return 1;
 	}
 
 	if (!fcorr.is_open()) {
-		cerr << "Could not open file \"" << argv[2] << "\".\n";
+		cerr << "Could not open file \"" << argv[2] << "\". Please contact contest administrator.\n";
 		return 2;
 	}
 
 	if (!ftest.is_open()) {
-		cerr << "Could not open file \"" << argv[3] << "\".\n";
+		cerr << "Could not open file \"" << argv[3] << "\". Please contact contest administrator.\n";
 		return 3;
 	}
 	

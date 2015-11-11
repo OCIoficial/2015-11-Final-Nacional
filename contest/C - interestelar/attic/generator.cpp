@@ -1,4 +1,6 @@
-#include <cstdio>
+#include <iostream>
+#include <cstring>
+#include <string>
 #include <cstdlib>
 #include <vector>
 #include <random>
@@ -16,13 +18,19 @@ int main (int argc, char *argv[]) {
 	
 	/* Input */
 	
-	int n = 1, s = 1, r = 1;
+	int n = 5, s = 5, r = 5;
 	for (int i = 1; i < argc; i++) {
 		if (argv[i][0] != '-') {
-			fprintf(stderr, "%s: Unknown parameter '%s'.\n", argv[0], argv[i]);
-			fprintf(stderr, "Try running \'%s -h\' for help", argv[0]);
+			cerr << argv[0] << ": Unknown parameter \'" << argv[i] << "\'.\n";
+			cerr << "Try running \'" << argv[0] << " -h\' for help.\n";
 			return 1;
 		}
+		
+		if (strcmp(argv[i],"--help") == 0) {
+			usage(argv[0]);
+			return 0;
+		}
+		
 		switch (argv[i][1]) {
 		case 'n':
 			//FIXME validate argument
@@ -40,8 +48,8 @@ int main (int argc, char *argv[]) {
 			break;
 		
 		default:
-			fprintf(stderr, "%s: Unknown parameter '%s'.\n", argv[0], argv[i]);
-			fprintf(stderr, "Try running \'%s -h\' for help.\n", argv[0]);
+			cerr << argv[0] << ": Unknown parameter \'" << argv[i] << "\'.\n";
+			cerr << "Try running \'" << argv[0] << " -h\' for help.\n";
 			return 1;
 		
 		case 'h':
@@ -54,17 +62,18 @@ int main (int argc, char *argv[]) {
 	
 	/* Range validation */
 	if (s < r) {
-		fprintf(stderr, "%s: Number of systems must be greater than number of effective systems.\n", argv[0]);
+		cerr << argv[0] << ": Number of systems must be greater than number of effective systems.\n";
 		return 1;
 	}
 	if (s < 5) {
-		fprintf(stderr, "%s: We need at least 5 systems.\n", argv[0]);
+		cerr << argv[0] << ": At least 5 systems required by statement condition.\n";
 		return 1;
 	}
 	if (r > n) {
-		fprintf(stderr, "%s: Warning: changing r=%d to %d (n=%d).\n", argv[0], r, n, n);
+		cerr << argv[0] << ": Warning: changing r=" << r << " to " << n << " (n=" << n << ").\n";
 		r = n;
 	}
+	
 	
 	
 	/* Random seed */
@@ -142,9 +151,9 @@ int main (int argc, char *argv[]) {
 	
 	/* Output */
 	
-	printf("%d %d\n", n, s);
+	cout << n << " " << s << endl;
 	for (int i = 0; i < n; i++) {
-		printf("%d\n", events[i]);
+		cout << events[i] << endl;
 	}
 	
 	return 0;
@@ -166,10 +175,18 @@ void swap(vector<int>& v, int i, int j) {
 }
 
 void usage(char *fname) {
-	system("echo \"Usage:\"");
-	system("echo \"generator [-n $(tput bold)nevents$(tput sgr0)] [-s $(tput bold)nsystems$(tput sgr0)] [-r $(tput bold)effsystems$(tput sgr0)]\"");
-	system("echo");
-	system("echo \"$(tput bold)nevents$(tput sgr0):\tNumber of events captured by BVET.\"");
-	system("echo \"$(tput bold)nsystems$(tput sgr0):\tNumber of systems tracked by BVET.\"");
-	system("echo \"$(tput bold)effsystems$(tput sgr0):\tNumber of systems with an event captured by BVET.\"");
+	string bd = "\033[1m";
+	string nm = "\033[0m";
+	string ul = "\033[4m";
+	
+	cout << "Usage: " + bd + fname + nm;
+	cout << " [" + bd + "-n " + nm + ul + "nevents" + nm + "]";
+	cout << " [" + bd + "-s " + nm + ul + "nsystems" + nm + "]";
+	cout << " [" + bd + "-r " + nm + ul + "effective" + nm + "]\n";
+	cout << "Generate input to standard output for OCI 2015 problem \'C - interestelar\'.\n";
+	cout << "\n";
+	cout << "  " + bd + "-n " + nm + ul + "nevents" + nm + "        sets number of events captured by BVET (5 by default).\n";
+	cout << "  " + bd + "-s " + nm + ul + "nsystems" + nm + "       sets number of systems tracked by BVET (5 by default).\n";
+	cout << "  " + bd + "-r " + nm + ul + "effective" + nm + "      sets number of systems present in event list (5 by default).\n";
+	cout << "\n";
 }
