@@ -15,16 +15,28 @@ Luego de una infructuosa ronda de acertijos clásicos, Golomb propone el siguien
 ``Considera una secuencia de enteros positivos $G(1), G(2), G(3),\dots$ con la propiedad de que para todo valor $n \geq 1$ se tiene que $G(n) \leq G(n+1)$ y además el número $n$ aparece exactamente $G(n)$ veces en la secuencia. >Cuál es el valor de $G(10^{10})$?''
 
 % Luego de reflexionar por un momento y de emitir sonidos de naturaleza diversa, llega a la conclusi\'on de que existe una \'unica secuencia con las propiedades demandadas por Golomb.
-Gollum se estremece de emoción al escuchar tan emocionante problema.
-Luego de reflexionar por un momento, y de emitir sonidos de naturaleza diversa, Gollum llega a varias conclusiones sobre la secuencia.
-En primer lugar se da cuenta que $G(1)$ debe ser 1. 
-Si tuviera un valor distinto este tendría que ser un número mayor que 1.
-Supongamos, por ejemplo, que $G(1)$ es 3.
-Por la propiedad $G(n)\leq G(n+1)$, sabemos que el 1 ya no puede aparecer en la secuencia.
-Pero si $G(1)$ es igual a 3, entonces el 1 debe aparecer tres veces en la secuencia, lo cuál no es posible, pues ya habíamos concluido que el 1 no podía aparecer.
-Entonces la única posibilidad es que $G(1)$ sea igual a 1.
-De la misma forma Gollum se da cuenta que la única posibilidad para $G(2)$ es que sea igual a 2.
-Más aún Gollum se da cuenta que los primeros valores de la secuencia son los siguientes:
+Gollum se estremece de emoción al escuchar tan interesante problema.
+Luego de pensar bastante, y de emitir sonidos de naturaleza diversa, 
+Gollum llega a varias conclusiones sobre la secuencia.
+En primer lugar llega a la maravillosa conclusión de que $G(1)$ debe ser $1$, lo que implica
+que el $1$ aparece una única vez y al inicio de la secuencia.
+Esto lo lleva a concluir que el segundo número en la secuencia debe ser $2$, es decir
+$G(2)=2$.
+De acá concluye que el $2$ aparece exactamente $2$ veces en la secuencia y por lo tanto $G(2)$ y $G(3)$
+deben ser $2$.
+De hecho, siguiendo con estas deducciones Gollum se da cuenta que los primeros valores de la secuencia son los siguientes:
+
+
+%Luego de reflexionar por un momento, y de emitir sonidos de naturaleza diversa, 
+%Gollum llega a varias conclusiones sobre la secuencia.
+%En primer lugar se da cuenta que $G(1)$ debe ser 1.
+%Si tuviera un valor distinto este tendría que ser un número mayor que 1.
+%Supongamos, por ejemplo, que $G(1)$ es 3.
+%Por la propiedad $G(n)\leq G(n+1)$, sabemos que el 1 ya no puede aparecer en la secuencia.
+%Pero si $G(1)$ es igual a 3, entonces el 1 debe aparecer tres veces en la secuencia, lo cuál no es posible, pues ya %habíamos concluido que el 1 no podía aparecer.
+%Entonces la única posibilidad es que $G(1)$ sea igual a 1.
+%De la misma forma Gollum se da cuenta que la única posibilidad para $G(2)$ es que sea igual a 2.
+%Más aún Gollum se da cuenta que los primeros valores de la secuencia son los siguientes:
 \begin{center}
   \begin{tabular}{c|cccccccccccccccc}
 	$n$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\
@@ -32,7 +44,9 @@ Más aún Gollum se da cuenta que los primeros valores de la secuencia son los s
 	$G(n)$ & 1 & 2 & 2 & 3 & 3 & 4 & 4 & 4 & 5 & 5 & 5 & 6 & 6 & 6 & 6 
   \end{tabular}
 \end{center}
-Gollum logra calcular mentalmente algunos valores más, pero rápidamente se da cuenta de que necesitará ser más astuto si desea calcular $G(10^{10})$.
+Por ejemplo, de la tabla de arriba obtenemos que $G(8)=4$ y $G(15)=6$. 
+Gollum logra calcular mentalmente algunos valores más, pero rápidamente se da cuenta de que necesitará 
+ser mucho más astuto si desea calcular $G(10^{10})$.
 Luego de ver su frustración, Golomb se apiada de Gollum y le permite utilizar el comodín telefónico.
 Gollum recuerda que participarías en la OCI y espera que puedas ayudarlo utilizando el computador.
 Tu tarea consiste en hacer un programa que dado un entero $n$ determine cuál es el valor de $G(n)$.
@@ -53,7 +67,8 @@ Tu tarea consiste en hacer un programa que dado un entero $n$ determine cuál es
   \score{30} Se probarán varios casos donde $25 < n \leq 10^5$.
   \score{35} Se probarán varios casos donde $10^{8} < n \leq 10^{10}$.
 \end{scoreDescription}
-\textbf{Nota:} En la subtarea 3 el valor de $n$ puede ser muy grande y no entrar en una variable de tipo \texttt{int}. Debes asegurarte de guardar el valor en una variable de tipo \texttt{long long}.
+\textbf{Nota:} En la subtarea 3 el valor de $n$ puede ser muy grande, tan grande que no pueda almacenarse 
+en una variable de tipo \texttt{int}. Debes asegurarte de guardar el valor en una variable de tipo \texttt{long long}.
 
 \begin{sampleDescription}
 \sampleIO{sample1}
