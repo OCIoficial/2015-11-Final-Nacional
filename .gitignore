@@ -30,5 +30,5 @@ auto
 TAGS
 *.bin
 *.class
-**/testdata/*.sol
+**/testdata/**/*.sol
 checker
