@@ -37,7 +37,7 @@
   \stackunder{\includegraphics[scale=0.7]{knight.png}}{\bf Caballo}
   \end{center}
   
-  Tu tarea consiste en crear un programa que determine la mínima cantidad de movimientos en los que es posible llevar una pieza desde una casilla a otra en un tablero de $100\times 100$
+  Tu tarea consiste en crear un programa que determine la mínima cantidad de movimientos en los que es posible llevar una pieza desde una casilla a otra en un tablero de $100\times 100$.
 \end{problemDescription}
 
 \begin{inputDescription}
@@ -47,19 +47,19 @@
   
   La segunda línea contiene dos enteros $X_{i}$ y $Y_{i}$, correspondientes a las coordenadas de la posición inicial de la pieza.
   El valor $X_{i}$ corresponde a la columna de la casilla en el tablero, mientras que $Y_{i}$ corresponde a la fila.
-  Las columnas y filas del tablero son numeradas con con valores entre 0 y 99, de izquierda a derecha y de abajo hacia arriba.
+  Las columnas y filas del tablero son numeradas con valores entre 0 y 99, de izquierda a derecha y de abajo hacia arriba.
   La columna de más a la izquierda corresponde a la columna 0 y la de más a la derecha a la columna 99.
   La fila de más abajo corresponde a la fila 0 y la de más arriba a la fila 99.
   
   La tercera línea de la entrada contiene dos enteros $X_{f}$ y $Y_{f}$ correspondientes a las coordenadas de la posición donde se quiere mover la pieza.
   
-  Los valores de $X_i$, $Y_i$, $X_f$ y $X_f$ siempre serán mayores o iguales que 0 y menores o iguales que 99.
-  Además $P$ siempre representará una pieza válida, es decir, $1 \le P \le 5$.
+  Los valores de $X_i$, $Y_i$, $X_f$, y $X_f$ siempre serán mayores o iguales que 0 y menores o iguales que 99.
+  Además $P$ siempre representará una pieza válida, es decir, $P$ solo tomará los valores $1$, $2$, $3$, $4$, o $5$.
 \end{inputDescription}
 
 \begin{outputDescription}
   Tu programa debe imprimir una única línea con un entero: el número mínimo de movimientos en que es posible llevar la pieza desde la casilla inicial a la final.
-  Si no es posible mover la pieza desde la casilla inicial a la final tu programa debe imprimir -1.
+  Si no es posible mover la pieza desde la casilla inicial a la final, tu programa debe imprimir -1.
 \end{outputDescription}
 
 \begin{scoreDescription}
